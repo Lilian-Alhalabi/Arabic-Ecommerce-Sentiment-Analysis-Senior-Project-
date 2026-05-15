@@ -5,6 +5,8 @@ An AI-powered system that classifies Arabic
 e-commerce reviews into Positive, Negative, 
 and Neutral sentiments using MARBERT transformer model.
 
+<img width="1536" height="1024" alt="fbb24a3d-4871-49f7-9a02-30990ff213b8" src="https://github.com/user-attachments/assets/41e679e3-33ee-4013-8566-6a85330baced" />
+
 ## Features
 - Arabic text preprocessing and normalization
 - MARBERT-based sentiment classification
