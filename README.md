@@ -30,6 +30,12 @@ and Neutral sentiments using MARBERT transformer model.
 | Recall | 94.78% |
 | F1-Score | 94.74% |
 
+## User Interface:
+<img width="1000" height="872" alt="Screenshot 2026-05-06 165800" src="https://github.com/user-attachments/assets/092f8c67-ee40-4fd8-a182-fabdcecff772" /><img width="1000" height="808" alt="Screenshot 2026-04-20 191159" src="https://github.com/user-attachments/assets/9ee71c55-941a-4613-ac90-54d00840c734" />
+
+
+
+
 ## Installation
 pip install -r requirements.txt
 
