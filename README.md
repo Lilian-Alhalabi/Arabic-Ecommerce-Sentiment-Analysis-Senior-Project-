@@ -31,7 +31,7 @@ and Neutral sentiments using MARBERT transformer model.
 | F1-Score | 94.74% |
 
 ## User Interface:
-<img width="200" height="100" alt="Screenshot 2026-05-06 165800" src="https://github.com/user-attachments/assets/092f8c67-ee40-4fd8-a182-fabdcecff772" /><img width="200" height="100" alt="Screenshot 2026-04-20 191159" src="https://github.com/user-attachments/assets/9ee71c55-941a-4613-ac90-54d00840c734" />
+<img width="400" height="300" alt="Screenshot 2026-05-06 165800" src="https://github.com/user-attachments/assets/092f8c67-ee40-4fd8-a182-fabdcecff772" /><img width="400" height="300" alt="Screenshot 2026-04-20 191159" src="https://github.com/user-attachments/assets/9ee71c55-941a-4613-ac90-54d00840c734" />
 
 
 
