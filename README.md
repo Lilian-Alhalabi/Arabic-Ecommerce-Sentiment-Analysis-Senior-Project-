@@ -14,13 +14,14 @@ and Neutral sentiments using MARBERT transformer model.
 - Supports both Arabic and English interface
 - Data balancing using RandomOverSampler
 
-## Tech Stack
-- Python
-- HuggingFace Transformers (MARBERT)
-- PyTorch
-- Streamlit
-- Scikit-learn
-- Pandas
+### Key Technologies
+| Component | Tool |
+|-----------|------|
+| Model | MARBERT (`UBC-NLP/MARBERT`) |
+| Framework | HuggingFace Transformers + PyTorch |
+| Balancing | RandomOverSampler (imbalanced-learn) |
+| Evaluation | scikit-learn metrics |
+| Deployment | Streamlit + Cloudflare Tunnel |
 
 ## Model Performance
 | Metric | Score |
