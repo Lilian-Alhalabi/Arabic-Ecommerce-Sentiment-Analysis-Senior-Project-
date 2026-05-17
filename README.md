@@ -33,14 +33,12 @@ and Neutral sentiments using MARBERT transformer model.
 ## User Interface:
 <img width="500" height="300" alt="Screenshot 2026-05-06 165800" src="https://github.com/user-attachments/assets/092f8c67-ee40-4fd8-a182-fabdcecff772" /><img width="500" height="300" alt="Screenshot 2026-04-20 191159" src="https://github.com/user-attachments/assets/9ee71c55-941a-4613-ac90-54d00840c734" />
 
-
-
-
-## Installation
-pip install -r requirements.txt
+## Model Files 
+https://1drv.ms/f/c/1ca44c82903837e1/IgCCtleslY_aSK_nLLTCJL7NARwt0pEhp-ZLdKXTZ8Ie0Vg?e=hwGXHi 
 
 ## How to Run
-streamlit run app/streamlit_app.py
+
+Follow Setup and Prerequisites files
 
 ## Dataset
 Arabic Company Reviews Dataset from Kaggle
