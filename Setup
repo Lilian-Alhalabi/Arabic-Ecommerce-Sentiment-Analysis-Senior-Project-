@@ -1,0 +1,133 @@
+Project Setup and Execution Guide
+
+Executing all notebook cells sequentially is a critical requirement to ensure the correct functioning 
+of the project. Each cell is designed to perform a specific task, including data loading, 
+preprocessing, model initialization, and application setup. Skipping or running cells out of order 
+may lead to missing dependencies, undefined variables, or incomplete configurations, which can 
+cause errors or unexpected behavior. 
+Therefore, it is essential to run all cells from start to finish to guarantee that the system operates 
+smoothly and that the web application is deployed as intended. 
+
+Step 1: Upload Project Files to Google Drive 
+First, upload the project folder to Google Drive with the name: 
+
+MARBERT_Sentiment_Project 
+The folder must include the following: 
+• Dataset file: CompanyReviews.csv  
+• Pre-trained model folder: sentiment_model  
+• UI image required for the interface  
+
+Importance of this step: 
+This step ensures that all project components are stored in a centralized and accessible 
+location. It allows seamless integration with the Colab environment for loading data and 
+model files. 
+
+Step 2: Upload the Notebook to Google Colab 
+Upload the Jupyter Notebook file to Google Colab. 
+Importance of this step: 
+Google Colab provides a cloud-based execution environment with optional GPU support, 
+which enhances performance when handling NLP models and large datasets.
+
+Step 3: Execute Notebook Cells Sequentially 
+Run the notebook cells one by one in sequence. 
+Importance of this step: 
+Sequential execution ensures that all preprocessing, configurations, and dependencies are 
+properly initialized before moving to the next steps, preventing runtime errors. 
+
+Step 4: Mount Google Drive and Load Dataset 
+Before accessing the dataset, mount Google Drive using: 
+from google.colab import drive 
+drive.mount('/content/drive') 
+Then load the dataset: 
+import pandas as pd 
+file_path = 
+"/content/drive/MyDrive/MARBERT_Sentiment_Project/CompanyReviews.csv" 
+
+df = pd.read_csv(file_path) 
+
+Importance of this step: 
+Mounting Google Drive establishes a connection between Colab and your stored files, 
+enabling direct access to the dataset required for processing and model input.
+
+Step 5: Continue Execution Until Model Stage 
+Proceed with running the remaining cells until reaching the model stage. 
+
+Step 6: Model Usage Options 
+At this stage, users have two options: 
+Option A: Train the Model 
+Uncomment and run the training code provided in the notebook. 
+Option B (Recommended for faster execution and demonstration purposes):  
+Load Pre-trained Model 
+Load the pre-trained model from Google Drive: 
+from transformers import AutoTokenizer, 
+AutoModelForSequenceClassification 
+model_path = 
+"/content/drive/MyDrive/MARBERT_Sentiment_Project/sentiment_model" 
+tokenizer = AutoTokenizer.from_pretrained(model_path) 
+model = 
+AutoModelForSequenceClassification.from_pretrained(model_path) 
+ 
+ 
+Uncomment and run the training code provided in the notebook. (Not preferable) 
+""" training_args = TrainingArguments( 
+    output_dir='./results', 
+    num_train_epochs=5, 
+    per_device_train_batch_size=16, 
+    per_device_eval_batch_size=32, 
+    eval_strategy="epoch", 
+    save_strategy="epoch", 
+    load_best_model_at_end=True, 
+    metric_for_best_model="f1_weighted", 
+    report_to="none", 
+    seed=SEED, 
+    fp16=torch.cuda.is_available() 
+) 
+ 
+trainer = Trainer( 
+    model=model, 
+    args=training_args, 
+    train_dataset=train_dataset, 
+    eval_dataset=test_dataset, 
+    compute_metrics=compute_metrics, 
+    callbacks=[EarlyStoppingCallback(2)] 
+) 
+ 
+trainer.train() """ 
+ 
+ 
+Importance of this step: 
+Using a pre-trained model significantly reduces computational time and resources while 
+maintaining high performance. 
+ 
+Step 7: Install Required Libraries 
+Install Streamlit: 
+!python3 -m pip install -q streamlit 
+ 
+Install translation library: 
+!pip -q install deep-translator 
+ 
+ 
+ 
+Install Cloudflare tunnel: 
+!wget -q 
+https://github.com/cloudflare/cloudflared/releases/latest/downloa
+d/cloudflared-linux-amd64.deb 
+!dpkg -i cloudflared-linux-amd64.deb 
+Importance of this step: 
+These libraries are required to build and deploy the web-based user interface and enable 
+additional features such as translation and public access. 
+
+Step 8: Launch the Web Application 
+After running all cells, execute the final cell: 
+!grep -a -o 'https://.*trycloudflare.com' tunnel.log 
+A link will appear. Click it to access the deployed web application. 
+Importance of this step: 
+This step exposes the local Streamlit app to the internet via a secure tunnel, allowing users 
+to interact with the system through a web interface. 
+
+Note: 
+The steps outlined above are provided for clarification purposes. 
+However, all procedures and implementations are already fully 
+defined within the notebook code. Therefore, it is essential to 
+execute all cells sequentially to ensure the web application functions 
+correctly and as intended. 
