@@ -1,0 +1,64 @@
+Prerequisites 
+To successfully run and reproduce this project, the following 
+prerequisites are required:
+
+1. Programming Language 
+• Python3.x 
+Python is used as the main programming language for 
+implementing the entire sentiment analysis pipeline, including 
+data preprocessing, model training, and evaluation. 
+
+2. Required Libraries 
+• pandas 
+Used for loading and manipulating the dataset, particularly 
+for reading CSV files and handling tabular data.  
+• numpy 
+Provides efficient numerical operations and is used for array 
+handling, random seed initialization, and prediction 
+processing.  
+• re (Regular Expressions) 
+Used for cleaning and normalizing Arabic text by removing 
+unwanted characters, symbols, and patterns.  
+• torch (PyTorch) 
+Serves as the deep learning framework for handling tensors, 
+utilizing GPU acceleration, and running the MARBERT 
+model.  
+• transformers 
+Used to load and work with the pre-trained MARBERT 
+model and tokenizer for Arabic sentiment classification.  
+• scikit-learn 
+Provides tools for splitting the dataset (training/testing) and 
+evaluating model performance using metrics such as 
+accuracy, precision, recall, and F1-score.  
+• imbalanced-learn 
+Used to address class imbalance in the dataset through 
+techniques such as Random Oversampling.  
+• matplotlib 
+Used for visualizing results, including plotting graphs such as 
+the confusion matrix.  
+• seaborn 
+Enhances data visualization by providing more informative 
+and visually appealing plots, especially for the confusion 
+matrix heatmap.  
+3. Development Environment 
+• Google Colab 
+Used as the primary development environment to run the 
+notebook, execute the model, and utilize GPU acceleration 
+when available.  
+• Internet Connection 
+Required to download the pre-trained MARBERT model 
+from Hugging Face.  
+• GPU (Optional but Recommended) 
+Speeds up model training and evaluation, especially when 
+using transformer-based models.  
+
+4. Dataset 
+• Arabic Company Reviews Dataset (CSV file) 
+This dataset contains real Arabic customer reviews and is 
+used as the input data for training and evaluating the 
+sentiment analysis model. 
+• https://www.kaggle.com/datasets/fahdseddik/arabic-company-reviews 
+
+These prerequisites ensure the correct execution of the 
+complete sentiment analysis pipeline, from data preprocessing 
+to model inference and evaluation. 
